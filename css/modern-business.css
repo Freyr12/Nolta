@@ -91,3 +91,7 @@ footer {
         height: 70%;
     }
 }
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top:0;
+ }

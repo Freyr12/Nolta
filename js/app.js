@@ -1,7 +1,6 @@
-angular.module('nolta', ['ngRoute']);
+angular.module('nolta', ['ngRoute'])
 
-angular.module('nolta').config(['$routeProvider',
-function ($routeProvider) {
+.config(function ($routeProvider) {
   $routeProvider
     .when('/frontpage', { templateUrl: 'views/frontpage.html', controller: 'SimpleController' })
     .when('/fyrirlestrar', { templateUrl: 'views/fyrirlestrar.html', controller: 'AboutController' })
@@ -12,4 +11,7 @@ function ($routeProvider) {
     .otherwise({
       redirectTo: '/frontpage'
     });
-}]);
+    // Uncomment this when removing the /#/ in the path. Needs some server rewriting
+    // Also add $locationProvider as a function parameter
+    // $locationProvider.html5Mode(true);
+});
